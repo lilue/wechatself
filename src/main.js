@@ -6,9 +6,15 @@ import VueRouter from 'vue-router'
 import App from './App'
 import router from './router'
 import { WechatPlugin } from 'vux'
+import wechatAuth from '@/utils/wechatAuth'
 
 Vue.use(VueRouter)
 Vue.use(WechatPlugin)
+
+Vue.use(wechatAuth, {
+  appid: 'wx5550d0feaccf7347',
+  scope: 'snsapi_userinfo'
+})
 
 FastClick.attach(document.body)
 
